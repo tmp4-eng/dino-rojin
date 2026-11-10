@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Dino Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="header">
+      <div class="score-board">
+        <span class="hi-score" id="hiScore">HI 00000</span>
+        <span class="current-score" id="score">00000</span>
+      </div>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="gameCanvas" width="800" height="250"></canvas>
+      
+      <!-- Overlay for Start/Game Over -->
+      <div id="gameOverlay" class="overlay">
+        <div id="overlayContent" class="overlay-content">
+          <h2 id="overlayTitle">T-REX RUNNER</h2>
+          <p id="overlaySubtitle">Press <b>SPACE</b> or <b>TAP</b> to Jump</p>
+          <button id="startBtn" class="pixel-btn">START GAME</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-hint">
+      <span>Jump: <kbd>Space</kbd> or <kbd>&uarr;</kbd> or <kbd>Touch</kbd></span>
+      <span>Duck: <kbd>&darr;</kbd></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

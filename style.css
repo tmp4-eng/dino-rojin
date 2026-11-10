@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Press Start 2P', monospace, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+  -webkit-user-select: none;
+  color: #535353;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 840px;
+  padding: 20px;
+}
+
+.header {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.score-board {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.hi-score {
+  color: #757575;
+  margin-right: 15px;
+}
+
+.current-score {
+  color: #535353;
+  font-weight: bold;
+}
+
+.canvas-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #535353;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.overlay.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.overlay-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#overlayTitle {
+  font-size: 20px;
+  color: #535353;
+}
+
+#overlaySubtitle {
+  font-size: 11px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.pixel-btn {
+  font-family: 'Press Start 2P', monospace;
+  background: #535353;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.15s;
+  margin-top: 5px;
+}
+
+.pixel-btn:hover {
+  background: #333;
+}
+
+.pixel-btn:active {
+  transform: scale(0.98);
+}
+
+.controls-hint {
+  margin-top: 15px;
+  font-size: 10px;
+  color: #888;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+kbd {
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 2px 6px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  color: #333;
+}
+
